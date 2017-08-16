@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">13 Reasons Why</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_characters">Karakterler</string>
+    <string name="title_tapes">Kasetler</string>
+    <string name="title_music">Müzik</string>
+    <string name="title_activity_base">BaseActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>
