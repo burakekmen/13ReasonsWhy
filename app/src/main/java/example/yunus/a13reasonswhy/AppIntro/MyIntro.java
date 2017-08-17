@@ -9,7 +9,7 @@ import android.support.annotation.Nullable;
 import android.os.Bundle;
 import com.github.paolorotolo.appintro.AppIntro;
 
-import example.yunus.a13reasonswhy.BaseActivity;
+import example.yunus.a13reasonswhy.Activities.BaseActivity;
 import example.yunus.a13reasonswhy.R;
 
 public class MyIntro extends AppIntro
