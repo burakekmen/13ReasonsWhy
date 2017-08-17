@@ -5,4 +5,8 @@
     <color name="colorAccent">#061623</color>
     <color name="colorDark">#171F22</color>
     <color name="intro1">#0F161C</color>
+    <color name="tape_color">#1a1e29</color>
+    <color name="tape_card">#03A9F4</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
 </resources>
