@@ -4,24 +4,15 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/intro2"
+    android:background="@color/colorAccent"
     android:weightSum="1">
 
-   <pl.droidsonroids.gif.GifImageView
-       android:id="@+id/gifImageView"
-       android:layout_width="match_parent"
-       android:layout_height="500dp"
-       android:src="@drawable/entranceg" />
-
-   <TextView
-       android:id="@+id/textView3"
+   <ImageView
+       android:id="@+id/imageView"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:fontFamily="sans-serif-condensed"
-       android:text="SONUN BAŞLANGICI: 13 KASET"
-       android:textAlignment="center"
-       android:textColor="@color/white"
-       android:textSize="20sp" />
+       app:srcCompat="@drawable/slide2" />
+
 
 
 </LinearLayout>

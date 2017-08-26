@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="example.yunus.a13reasonswhy.Activities.InformationActivity">
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:fontFamily="serif"
+        android:text="13 Reasons Why uygulaması; Kodluyoruz Akademi,Türkiye İhracatçılar Meclisi ve TEB Girişim Evi destekleriyle gerçekleştirilen projeye sürecinde hayat buldu,
+Yunus Haznedar ve Eren Özhan tarafından sevgiyle kodlandı."
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_below="@+id/timLogo"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/kodluyoruzLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        app:srcCompat="@drawable/kodluyoruz"
+        android:layout_marginEnd="31dp"
+        android:layout_alignTop="@+id/tebLogo"
+        android:layout_alignEnd="@+id/tebLogo" />
+
+    <ImageView
+        android:id="@+id/tebLogo"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="43dp"
+        app:srcCompat="@drawable/teb"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:id="@+id/timLogo"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/tim"
+        android:layout_below="@+id/kodluyoruzLogo"
+        android:layout_toStartOf="@+id/tebLogo"
+        android:layout_marginEnd="13dp" />
+
+    <ImageButton
+        android:id="@+id/backToBase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/timLogo"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="13dp"
+        android:background="@color/white"
+        app:srcCompat="@drawable/ic_arrow_back_white" />
+</RelativeLayout>

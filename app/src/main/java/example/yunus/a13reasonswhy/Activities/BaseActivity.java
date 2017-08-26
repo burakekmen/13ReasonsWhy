@@ -2,6 +2,7 @@ package example.yunus.a13reasonswhy.Activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.icu.text.IDNA;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
@@ -76,20 +77,7 @@ public class BaseActivity extends AppCompatActivity
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -99,13 +87,12 @@ public class BaseActivity extends AppCompatActivity
 
         if (id == R.id.nav_rate)
         {
-            // Handle the camera action
+            startActivity(new Intent(BaseActivity.this,InformationActivity.class));
         }
 
         else if (id == R.id.nav_info)
         {
-
-
+            startActivity(new Intent(BaseActivity.this,InformationActivity.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
