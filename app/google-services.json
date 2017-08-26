@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "409117427135",
+    "firebase_url": "https://reasonswhy-cda01.firebaseio.com",
+    "project_id": "reasonswhy-cda01",
+    "storage_bucket": "reasonswhy-cda01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409117427135:android:cd86e4211835cd59",
+        "android_client_info": {
+          "package_name": "example.yunus.a13reasonswhy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "409117427135-ek4mt556ec832jk8l8eqgoron1for8va.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1etCTpcKIUidORGfrG-XUk7k_U9VRM-I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
