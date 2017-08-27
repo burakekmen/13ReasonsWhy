@@ -1,7 +1,5 @@
 package example.yunus.a13reasonswhy.Models;
 
-import android.graphics.Bitmap;
-
 /**
  * Created by yunus on 23.08.2017.
  */
@@ -11,7 +9,6 @@ public class Music
     private String singer;
     private String song;
     private String songURL;
-    private String albumCover;
 
     public String getSinger() {
         return singer;
@@ -35,13 +32,5 @@ public class Music
 
     public void setSongURL(String songURL) {
         this.songURL = songURL;
-    }
-
-    public String getAlbumCover() {
-        return albumCover;
-    }
-
-    public void setAlbumCover(String albumCover) {
-        this.albumCover = albumCover;
     }
 }
