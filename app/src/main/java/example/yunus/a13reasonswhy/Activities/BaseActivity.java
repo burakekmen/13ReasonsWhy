@@ -36,6 +36,7 @@ public class BaseActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.setTitle("13 Reasons Why");
         setContentView(R.layout.activity_base);
         showSlide();
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
