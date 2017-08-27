@@ -14,6 +14,7 @@ public class InformationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.setTitle("13 Reasons Why");
         setContentView(R.layout.activity_information);
         backToBase= (ImageButton) findViewById(R.id.backToBase);
         backToBase.setOnClickListener(new View.OnClickListener() {
