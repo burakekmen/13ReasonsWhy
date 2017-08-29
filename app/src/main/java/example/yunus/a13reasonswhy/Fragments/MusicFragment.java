@@ -2,10 +2,12 @@ package example.yunus.a13reasonswhy.Fragments;
 
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -17,6 +19,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -26,6 +29,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import java.util.ArrayList;
 import example.yunus.a13reasonswhy.Adapters.MusicAdapter;
+import example.yunus.a13reasonswhy.Adapters.ViewDialog;
 import example.yunus.a13reasonswhy.Models.Music;
 import example.yunus.a13reasonswhy.R;
 
@@ -38,6 +42,7 @@ public class MusicFragment extends Fragment {
     ArrayList<Music> musicArrayList=new ArrayList<>();
     private DatabaseReference firebaseDatabase;
     ProgressBar progressBar;
+    String uri;
     public String [] songs={"music1","music2","music3","music4"};
     public MusicFragment()
     {
@@ -56,6 +61,19 @@ public class MusicFragment extends Fragment {
         musicAdapter=new MusicAdapter(getContext(),musicArrayList);
         listView.setAdapter(musicAdapter);
         fetchMusicList();
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+            {
+                ViewDialog alert = new ViewDialog();
+                alert.showDialog(getActivity(), getContext());
+                SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(getContext());
+                SharedPreferences.Editor editor=preferences.edit();
+                String uri=musicArrayList.get(position).getSongURL();
+                editor.putString("uri",uri);
+                editor.apply();
+            }
+        });
         return view;
     }
 
@@ -76,9 +94,11 @@ public class MusicFragment extends Fragment {
                     music.setSinger(String.valueOf(dataSnapshot.child("singer").getValue()));
                     music.setAlbumCover(String.valueOf(dataSnapshot.child("albumURL").getValue()));
                     music.setSongURL(String.valueOf(dataSnapshot.child("songURL").getValue()));
+                    uri=String.valueOf(dataSnapshot.child("songURL").getValue());
                     musicArrayList.add(music);
                     musicAdapter.notifyDataSetChanged();
                     progressBar.setVisibility(View.GONE);
+
                 }
 
                 @Override

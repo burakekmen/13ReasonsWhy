@@ -1,8 +1,11 @@
 package example.yunus.a13reasonswhy.Adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,12 +31,14 @@ public class MusicAdapter extends BaseAdapter
     private Context context;
     private LayoutInflater layoutInflater;
     private ArrayList<Music> musicList;
+    private Activity activity;
 
     public MusicAdapter(Context context,ArrayList<Music> musicList)
     {
         this.context=context;
         layoutInflater= (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.musicList=musicList;
+
     }
 
     @Override
@@ -55,7 +60,7 @@ public class MusicAdapter extends BaseAdapter
     }
 
     @Override
-    public View getView(final int position, View convertView, ViewGroup parent)
+    public View getView(final int position, final View convertView, ViewGroup parent)
     {
         View view=layoutInflater.inflate(R.layout.card_music,parent,false);
         LinearLayout item = (LinearLayout) view.findViewById(R.id.itemMusic);
@@ -71,15 +76,6 @@ public class MusicAdapter extends BaseAdapter
                 .onlyScaleDown()
                 .into(albumCover);
 
-       item.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v)
-           {
-               String uri = musicList.get(position).getSongURL();
-               Intent launcher = new Intent( Intent.ACTION_VIEW, Uri.parse(uri) );
-               context.startActivity(launcher);
-           }
-       });
 
         return view;
     }
